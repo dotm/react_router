@@ -1,6 +1,6 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
-import { NotFound_404 } from './Error_Pages';
+import { Route, Switch, Redirect } from 'react-router-dom';
+import { NotFound_404, AccessDenied_401 } from './Error_Pages';
 import Header from './Header';
 import Footer from './Footer';
 import Home from './Home';
@@ -16,6 +16,12 @@ class App extends React.Component {
           <Route exact path='/' component={Home}/>
           <Route path='/about' component={About}/>
           <Route path='/careers' component={Careers}/>
+          <Redirect from='/admin' to={{
+            pathname: '/access_denied',
+            state: {referrer: '/admin'}
+          }}/>
+
+          <Route path='/access_denied' component={AccessDenied_401}/>
           <Route component={NotFound_404}/>
         </Switch>
         <Footer />
