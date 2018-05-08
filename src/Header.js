@@ -12,7 +12,7 @@ export default function Header(props){
                     <Link to="/about" className="nav-link">About</Link>
                 </li>
                 <li className="nav-item">
-                    <Link to="/events" className="nav-link">Events</Link>
+                    <Link to="/careers" className="nav-link">Careers</Link>
                 </li>
             </ul>
         </header>
