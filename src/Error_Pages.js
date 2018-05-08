@@ -7,10 +7,10 @@ function NotFound_404(props){
 }
 
 function AccessDenied_401(props){
-    const {state} = props.location
+    const routing_state = props.location.state
     let additional_message = '';
-    if(state){
-        const referrer = state.referrer
+    if(routing_state){
+        const referrer = routing_state.referrer
         additional_message = referrer ? `You are not allowed to access ${referrer}!` : ''
     }
     
