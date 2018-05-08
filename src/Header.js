@@ -14,6 +14,9 @@ export default function Header(props){
                 <li className="nav-item">
                     <Link to="/careers" className="nav-link">Careers</Link>
                 </li>
+                <li className="nav-item">
+                    <Link to="/admin" className="nav-link">Admin</Link>
+                </li>
             </ul>
         </header>
     )
